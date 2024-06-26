@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.postgres',  # Подключили приложение postgres, для реализации поиска в проекте
+    'django.contrib.postgres',  # Подключил приложение postgres, для реализации поиска в проекте
 
-    'debug_toolbar',
+    # 'debug_toolbar',
 
     'main',
     'goods',
@@ -58,7 +58,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -86,14 +86,23 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'f_store_db',
+#         'USER': 'dmitriy',
+#         'PASSWORD': 'd2ds',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'f_store_db',
-        'USER': 'dmitriy',
-        'PASSWORD': 'd2ds',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'USER': 'postgres',
+        'PASSWORD': 'd2ds'
     }
 }
 
