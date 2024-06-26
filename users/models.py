@@ -5,6 +5,7 @@ from goods.models import NULLABLE
 
 class User(AbstractUser):
     image = models.ImageField(upload_to='users_images', **NULLABLE, verbose_name='Аватар')
+    last_login = models.DateTimeField(**NULLABLE, verbose_name='Дата последнего входа')
 
     class Meta:
         db_table = 'user'
