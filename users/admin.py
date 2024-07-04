@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from carts.admin import CartInline
 from users.models import User
+from orders.admin import OrderInLine
 
 
 @admin.register(User)
@@ -21,4 +22,4 @@ class UserAdmin(admin.ModelAdmin):
         'user_permissions'
     ]
 
-    inlines = (CartInline,)
+    inlines = (CartInline, OrderInLine,)
